@@ -278,19 +278,19 @@
 
 
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-关于hexo命令记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/我的第一篇博客文章/">我的第一篇博客文章</a>
+      <a class="article-title" href="/2019/09/05/关于hexo命令记录/">我的第一篇博客文章</a>
     </h1>
   
 
         
-        <a href="/2019/09/05/我的第一篇博客文章/" class="archive-article-date">
+        <a href="/2019/09/05/关于hexo命令记录/" class="archive-article-date">
   	<time datetime="2019-09-05T14:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
 </a>
         
@@ -298,12 +298,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printlin(<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="关于推送hexo到git账户："><a href="#关于推送hexo到git账户：" class="headerlink" title="关于推送hexo到git账户："></a>关于推送hexo到git账户：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在hexo指定的初始账户中使用命令</span><br><span class="line">	hexo g <span class="comment">//生成一个静态文件</span></span><br><span class="line">	</span><br><span class="line">generate</span><br><span class="line"></span><br><span class="line">$ hexo generate</span><br><span class="line"></span><br><span class="line">生成静态文件。</span><br><span class="line">选项 	描述</span><br><span class="line">-d, --deploy 	文件生成后立即部署网站</span><br><span class="line">-w, --watch 	监视文件变动</span><br><span class="line">-b, --bail 	生成过程中如果发生任何未处理的异常则抛出异常</span><br><span class="line">-f, --force 	强制重新生成文件</span><br><span class="line">Hexo 引入了差分机制，如果 <span class="keyword">public</span> 目录存在，那么 hexo g 只会重新生成改动的文件。</span><br><span class="line">使用该参数的效果接近 hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><hr>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="关于创建在hexo创建一排博客命令："><a href="#关于创建在hexo创建一排博客命令：" class="headerlink" title="关于创建在hexo创建一排博客命令："></a>关于创建在hexo创建一排博客命令：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line"></span><br><span class="line">新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</span><br><span class="line"></span><br><span class="line">$ hexo new <span class="string">"post title with whitespace"</span></span><br><span class="line"></span><br><span class="line">参数如下：</span><br><span class="line">参数 	描述</span><br><span class="line">-p, --path 	自定义新文章的路径</span><br><span class="line">-r, --replace 	如果存在同名文章，将其替换</span><br><span class="line">-s, --slug 	文章的 Slug，作为新文章的文件名和发布后的 URL</span><br></pre></td></tr></table></figure>
 
+<hr>
+<h2 id="遇到的错误："><a href="#遇到的错误：" class="headerlink" title="遇到的错误："></a>遇到的错误：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在上传时 在 hexo -d 时未安装 hexo-deployer-git –-save</span><br><span class="line">解决方法： 使用命令</span><br><span class="line">$ cnpm install hexo-deployer-git –-save</span><br></pre></td></tr></table></figure>
+
+<hr>
 
       
 
@@ -316,7 +319,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/我的第一篇博客文章/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/05/关于hexo命令记录/">展开全文 >></a>
         </p>
       
 
