@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 月下独喝的博客</title>
+  <title>没办法记忆差.md | 月下独喝的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="月下独喝的第一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="月下独喝的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="2019 9 12回忆：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="没办法记忆差.md">
+<meta property="og:url" content="http://yoursite.com/2019/09/12/回忆录1-md/index.html">
 <meta property="og:site_name" content="月下独喝的博客">
-<meta property="og:description" content="月下独喝的第一个博客">
+<meta property="og:description" content="2019 9 12回忆：">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-12T16:27:56.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="月下独喝的博客">
-<meta name="twitter:description" content="月下独喝的第一个博客">
+<meta name="twitter:title" content="没办法记忆差.md">
+<meta name="twitter:description" content="2019 9 12回忆：">
   
     <link rel="alternative" href="/atom.xml" title="月下独喝的博客" type="application/atom+xml">
   
@@ -157,37 +158,130 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-回忆录1-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      没办法记忆差.md
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/回忆录1-md/" class="archive-article-date">
+
+        
+        <a href="/2019/09/12/回忆录1-md/" class="archive-article-date">
   	<time datetime="2019-09-12T15:51:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/回忆录1-md/">没办法记忆差.md</a>
-    </h1>
-  
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">674字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
           
-          
+        <!-- 添加完成 -->
+        
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>2019 9 12回忆：</p>
+<a id="more"></a>
+
+<hr>
+<h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><h4 id="1-给定一个序列求出一个拓扑排序"><a href="#1-给定一个序列求出一个拓扑排序" class="headerlink" title="1. 给定一个序列求出一个拓扑排序"></a>1. 给定一个序列求出一个拓扑排序</h4><p>​    将每个点的入度 计算出， 设定一个队列 将入度为0的点优先加入队列， 每从队列拿出一个点， 将与此点相连的点</p>
+<p>的入度减1.</p>
+<p>​    知道队列为空时推出循环</p>
+<h4 id="2-给定序列判断是否是拓扑排序"><a href="#2-给定序列判断是否是拓扑排序" class="headerlink" title="2. 给定序列判断是否是拓扑排序"></a>2. 给定序列判断是否是拓扑排序</h4><p>​    通过双重for循环， 设定一个degree数组记录每个点的入度， 按顺序拿出给定序列的点， 没拿出一个点</p>
+<p>就将 与序列相连的点的入度减去， 依此判断此时序列中的点的入度是否为0 ，如果为0则继续判断， 否则</p>
+<p>不是拓扑排序</p>
+<p>参考题目：</p>
+<p>​    pat甲级：1146 Topological Order</p>
+<hr>
+<h3 id="优化dijkstra-算法-堆优化"><a href="#优化dijkstra-算法-堆优化" class="headerlink" title="优化dijkstra 算法(堆优化)"></a>优化dijkstra 算法(堆优化)</h3><pre><code>####     前式链向星 :
+
+    ##### 定义图结构</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">struct&#123;</span><br><span class="line">    int next; //记录相同起点的边的先加入的边</span><br><span class="line">    int to;   // from - &gt; to （顾名思义 就是对于点相连的另外一个点)</span><br><span class="line">    int w;    //权值</span><br><span class="line">&#125;a[maxsize];  </span><br><span class="line"><span class="attr">head[maxsize]</span> = &#123;-<span class="number">1</span>&#125;<span class="comment">; // 记录边号</span></span><br><span class="line"></span><br><span class="line">不一定要用结构体存储图：</span><br><span class="line">next[maxsize];</span><br><span class="line">to[maxsize];</span><br><span class="line">w[maxsize];</span><br><span class="line">head[maxsize];</span><br></pre></td></tr></table></figure>
+
+<h5 id="向图中加边："><a href="#向图中加边：" class="headerlink" title="向图中加边："></a>向图中加边：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> from, <span class="keyword">int</span> to, <span class="keyword">int</span> cost)</span></span>&#123;</span><br><span class="line">   next[cnt] = head[from];</span><br><span class="line">   to[cnt]   = to;</span><br><span class="line">   w[cnt]    = cost;</span><br><span class="line">   head[from] = cnt++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="遍历图结构"><a href="#遍历图结构" class="headerlink" title="遍历图结构"></a>遍历图结构</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = head[s]; i != <span class="number">-1</span>; i = next[i])&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="string">" "</span> &lt;&lt; to[i] &lt;&lt; <span class="string">" "</span> &lt;&lt; w[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        :1st_place_medal: </p>
+<hr>
+<h3 id="floyed算法（多源最短路径路径算法）"><a href="#floyed算法（多源最短路径路径算法）" class="headerlink" title="floyed算法（多源最短路径路径算法）"></a>floyed算法（多源最短路径路径算法）</h3><p>​    算法代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; n; k++)&#123; <span class="comment">//此步不能改变位置</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">			edge[i][j] = min(edge[i][j], edge[i][k] + edge[k][j]); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体参考题目： 第一pat甲级 最后一道 dijkstra Sequence</p>
+<hr>
+<h3 id="pat乙级题目："><a href="#pat乙级题目：" class="headerlink" title="pat乙级题目："></a>pat乙级题目：</h3><pre><code>#### 进制转换题目 十进制 转换为任意进制</code></pre><p>​    c++中不能返回char数组，  因此设定一个 全局变量  int len[] 数组</p>
+<p>​    具体转换代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> data[<span class="number">1005</span>], len = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">digitToD</span><span class="params">(<span class="keyword">int</span> sum, <span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp[<span class="number">1005</span>];</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		temp[len++] = sum % d;</span><br><span class="line">		sum = sum / d;</span><br><span class="line">	&#125;<span class="keyword">while</span>(sum != <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)&#123;</span><br><span class="line">		data[i] = temp[len - i - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    具体题目： B1022 A1019</p>
+<hr>
+<h3 id="pat甲级题目复习"><a href="#pat甲级题目复习" class="headerlink" title="pat甲级题目复习"></a>pat甲级题目复习</h3><pre><code>#### 快乐模拟：</code></pre><h5 id="螺旋矩阵"><a href="#螺旋矩阵" class="headerlink" title="螺旋矩阵:"></a>螺旋矩阵:</h5><pre><code> 第一步 求出 m 行 n 列， m - n 要最小， ：
+显然 m 尽量小， m = sqrt(num);  当 N % m != 0  此时 m++;</code></pre><h4 id="dfs遍历："><a href="#dfs遍历：" class="headerlink" title="dfs遍历："></a>dfs遍历：</h4><p>​    本题需要作出优化，关键是 保证大的项式 在前， 因此第一项式 大小确定后 ， 以后的项式都不能超过第一个项式</p>
+<p>，因此dfs时 设定一个index 表示 项式大小，这样会做出很多的优化 orz；</p>
+<p>​    具体题目： A1103</p>
+<h4 id="bfs遍历：（待补充"><a href="#bfs遍历：（待补充" class="headerlink" title="bfs遍历：（待补充)"></a>bfs遍历：（待补充)</h4>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -200,184 +294,117 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/12/回忆录1-md/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/教育厅项目统计接口-md/" class="archive-article-date">
-  	<time datetime="2019-09-12T09:26:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/12/教育厅项目统计接口-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">教育厅项目统计接口.md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/教育厅项目统计接口-md/">教育厅项目统计接口.md</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/必须写//" class="article-tag-list-link color4">必须写</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#拓扑排序"><span class="toc-number">1.</span> <span class="toc-text">拓扑排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-给定一个序列求出一个拓扑排序"><span class="toc-number">1.1.</span> <span class="toc-text">1. 给定一个序列求出一个拓扑排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-给定序列判断是否是拓扑排序"><span class="toc-number">1.2.</span> <span class="toc-text">2. 给定序列判断是否是拓扑排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化dijkstra-算法-堆优化"><span class="toc-number">2.</span> <span class="toc-text">优化dijkstra 算法(堆优化)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#向图中加边："><span class="toc-number">2.0.1.</span> <span class="toc-text">向图中加边：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#遍历图结构"><span class="toc-number">2.0.2.</span> <span class="toc-text">遍历图结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#floyed算法（多源最短路径路径算法）"><span class="toc-number">3.</span> <span class="toc-text">floyed算法（多源最短路径路径算法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pat乙级题目："><span class="toc-number">4.</span> <span class="toc-text">pat乙级题目：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pat甲级题目复习"><span class="toc-number">5.</span> <span class="toc-text">pat甲级题目复习</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#螺旋矩阵"><span class="toc-number">5.0.1.</span> <span class="toc-text">螺旋矩阵:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dfs遍历："><span class="toc-number">5.1.</span> <span class="toc-text">dfs遍历：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bfs遍历：（待补充"><span class="toc-number">5.2.</span> <span class="toc-text">bfs遍历：（待补充)</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/09/Untitled/" class="archive-article-date">
-  	<time datetime="2019-09-09T04:36:01.524Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/09/hexo-yila主题的配置-md/" class="archive-article-date">
-  	<time datetime="2019-09-09T03:47:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/09/hexo-yila主题的配置-md/">hexo_yila主题的配置.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/08/关于c++函数指针的学习/" class="archive-article-date">
-  	<time datetime="2019-09-08T15:10:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/关于c++函数指针的学习/">对c++函数指针的学习.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/05/关于hexo命令记录/" class="archive-article-date">
-  	<time datetime="2019-09-05T14:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/05/关于hexo命令记录/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/05/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-05T14:45:26.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/05/hello-world/">官方默认hexo命令教程（hexo基本操作）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -410,8 +437,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
