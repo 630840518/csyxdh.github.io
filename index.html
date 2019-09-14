@@ -159,6 +159,121 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-优先队列-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/13/优先队列-md/">优先队列.md</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/13/优先队列-md/" class="archive-article-date">
+  	<time datetime="2019-09-13T15:16:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">300字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+        <!-- 添加完成 -->
+        
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="优先队列的定义是-："><a href="#优先队列的定义是-：" class="headerlink" title="优先队列的定义是 ："></a>优先队列的定义是 ：</h3><h4 id="1-存在的库函数："><a href="#1-存在的库函数：" class="headerlink" title="1.存在的库函数："></a>1.存在的库函数：</h4><p>​        #include<queue></queue></p>
+<h4 id="2-一般的定义"><a href="#2-一般的定义" class="headerlink" title="2.一般的定义"></a>2.一般的定义</h4><p>​        priosity_queue&lt;type, cotainers&lt;&gt; , cmp&gt; q; /第一个参数为参数类型， 第二参数为容器，第三个参数为比较函数. 一般可以用 greater&lt;类型&gt; 表示从小到大排序.</p>
+<p>对于 优先队列与 普通排序不同：</p>
+<p>重载优先队列时 优先队列默认排序是 大顶堆 从大到小排序</p>
+<p>因此要使得 优先队列 默认从小到大排序 需要 定义为：</p>
+<p>struct cmp{</p>
+<p>​    bool operator(const Node &amp;a,const  Node &amp;b) const{</p>
+<p>​        return a.xx &gt; b.xx； //按照小顶堆排序</p>
+<p>​    }</p>
+<p>}</p>
+<p>eg: </p>
+<h4 id="3-常见-重载cmp代码格式"><a href="#3-常见-重载cmp代码格式" class="headerlink" title="3. 常见 重载cmp代码格式"></a>3. 常见 重载cmp代码格式</h4><p>如果直接定义 为 priosity_queue<node> q 这样默认的格式为 ：这样默认安装大顶堆的排序方式</node></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> d, u;</span><br><span class="line"><span class="comment">//	bool operator &lt;( const Node &amp;x )const //这是重载小于符号</span></span><br><span class="line"><span class="comment">//    &#123;</span></span><br><span class="line"><span class="comment">//        return d &gt; x.d;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span>&#123;</span>  <span class="comment">//和普通的重载排序算法不同， 因为优先队列默认是 </span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">operator</span> <span class="params">()</span> <span class="params">(<span class="keyword">const</span> Node &amp;a,<span class="keyword">const</span> Node &amp;b)</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> a.d &gt; b.d;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-优先队列用到的场景："><a href="#4-优先队列用到的场景：" class="headerlink" title="4.优先队列用到的场景："></a>4.优先队列用到的场景：</h4><p>​    1.堆优化算法： dijkstra算法， prime算法.</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/必须写//" class="article-tag-list-link color4">必须写</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/13/优先队列-md/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-关于markdown语法学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -257,7 +372,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/pat乙级记录/">ppaty乙级记录.md</a>
+      <a class="article-title" href="/2019/09/13/pat乙级记录/">pat乙级记录.md</a>
     </h1>
   
 
@@ -273,7 +388,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">891字</span>
+        <span class="post-count">1.6k字</span>
       </span>
     </span>
 
@@ -282,7 +397,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">8分</span>
       </span>
     </span>
 </div>
@@ -372,7 +487,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">817字</span>
+        <span class="post-count">1.9k字</span>
       </span>
     </span>
 
@@ -381,7 +496,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">9分</span>
       </span>
     </span>
 </div>
@@ -395,13 +510,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="java学习"><a href="#java学习" class="headerlink" title="java学习"></a>java学习</h2><h4 id="java基本特性学习："><a href="#java基本特性学习：" class="headerlink" title="java基本特性学习："></a>java基本特性学习：</h4><pre><code>####     多态的学习
-
-* 通过java编程思想重新学习了 java多态特性， 向上转型的思想 （向上转型的由来 在过去程序设计思想中</code></pre><p>java的父类在上方， 子类在下方） </p>
-<hr>
-<h2 id="html超文本标记语言学习："><a href="#html超文本标记语言学习：" class="headerlink" title="html超文本标记语言学习："></a>html超文本标记语言学习：</h2><pre><code>####  a标签的学习</code></pre><p>​    a 标签定义超链接，用于从一张页面链接到另一张页面。</p>
-<p>​    a 元素最重要的属性是 href 属性，它指示链接的目标。 markdown支持此种笔记格式</p>
-<p>2019 9 12回忆：</p>
+<h2 id="java学习"><a href="#java学习" class="headerlink" title="java学习"></a>java学习</h2><h4 id="java基本特性学习："><a href="#java基本特性学习：" class="headerlink" title="java基本特性学习："></a>java基本特性学习：</h4>
         
       
 
@@ -500,27 +609,8 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-接口-指南各阶段流程统计数据："><a href="#1-接口-指南各阶段流程统计数据：" class="headerlink" title="1.接口      指南各阶段流程统计数据："></a>1.接口      <a href="http://127.0.0.1:8085/sc_edu_test/swagger-ui.html#!/2535121335215083845427573279693124332479357452596825454" target="_blank" rel="noopener">指南各阶段流程统计数据</a>：</h3><h3 id="api-edu-statis-stage"><a href="#api-edu-statis-stage" class="headerlink" title="/api/edu/statis/stage"></a><a href="http://127.0.0.1:8085/sc_edu_test/swagger-ui.html#!/2535121335215083845427573279693124332479357452596825454/getStageInfoByGuideIdUsingGET_2" target="_blank" rel="noopener">/api/edu/statis/stage</a></h3><hr>
-<p>: 此接口是统计 一个指南下 立题阶段 对应各个项目状态的项目数量情况</p>
-<p>​             一个指南下 结题阶段下 查询具体 reviewYear的 各个等级的项目数量</p>
-<h4 id="1-其中统计的立题阶段项目情况是："><a href="#1-其中统计的立题阶段项目情况是：" class="headerlink" title="1.其中统计的立题阶段项目情况是："></a>1.其中统计的立题阶段项目情况是：</h4><p>​    其中表示立题阶段的项目是 : reviewYear = 0；</p>
-<p>​    因此前端传入参数 是 guideId . 根据对应的guideId 查找数据表 project 表 中 reviewYear = 0的所有项目 </p>
-<p>​    ，然后根据项目所处的状态进行分类</p>
-<p>具体执行的sql语句：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--统计具体指南 立题阶段 数据 reviewYear = 0就为立题--&gt;</span><br><span class="line">&lt;select id ="statisConclu"  resultMap ="statisGuiStateConClu" parameterType="com.myqm.vo.edu.statis.StatisGuidePrjStateQuery"&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">COUNT</span>(*) <span class="keyword">as</span> prjcount,state</span><br><span class="line"><span class="keyword">from</span> <span class="keyword">project</span></span><br><span class="line"><span class="keyword">where</span> review_year = <span class="number">0</span> <span class="keyword">and</span> guide_id = <span class="comment">#&#123;guideId&#125;</span></span><br><span class="line"> &lt;<span class="keyword">if</span> <span class="keyword">test</span>=<span class="string">"depIds!=null"</span> &gt;</span><br><span class="line">        <span class="keyword">and</span> p.dep_id <span class="keyword">in</span></span><br><span class="line">        &lt;foreach item=<span class="string">"item"</span> collection=<span class="string">"depIds"</span> <span class="keyword">open</span>=<span class="string">"("</span> separator=<span class="string">","</span> <span class="keyword">close</span>=<span class="string">")"</span>&gt;</span><br><span class="line">            <span class="comment">#&#123;item &#125;</span></span><br><span class="line">        &lt;/foreach&gt;</span><br><span class="line">  &lt;/<span class="keyword">if</span>&gt;</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> state ;</span><br><span class="line"></span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-其中统计结题阶段-各个项目的-等级数量情况是："><a href="#2-其中统计结题阶段-各个项目的-等级数量情况是：" class="headerlink" title="2 其中统计结题阶段 各个项目的 等级数量情况是："></a>2 其中统计结题阶段 各个项目的 等级数量情况是：</h4><p>​    1.统计在具体指南 具体 reviewYear 下 各个等级(0未评定 1为不合格，2为合格，3为良好，4为优秀) 的 具体项目数量</p>
-<p>具体执行的sql语句:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--统计具体指南 结题阶段 等级--&gt;</span><br><span class="line">   &lt;select id =&quot;statisReview&quot; resultMap=&quot;statisGuiStateReview&quot; parameterType =&quot;com.myqm.vo.edu.statis.StatisGuidePrjStateQuery&quot; &gt;</span><br><span class="line"></span><br><span class="line">   SELECT count(*), rank ,review_year</span><br><span class="line">   from project_rank</span><br><span class="line">   where project_id in (SELECT project_id from project where guide_id = #&#123;guideId&#125;</span><br><span class="line">       &lt;if test=&quot;depIds != null&quot; &gt;</span><br><span class="line">           and dep_id in</span><br><span class="line">           &lt;foreach item=&quot;item&quot; collection=&quot;depIds&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;</span><br><span class="line">               #&#123;item &#125;</span><br><span class="line">           &lt;/foreach&gt;</span><br><span class="line">       &lt;/if&gt;</span><br><span class="line">       and review_year = #&#123;reviewYear&#125;</span><br><span class="line">       )</span><br><span class="line">   GROUP BY review_year, rank</span><br><span class="line">   ORDER BY rank;</span><br><span class="line"></span><br><span class="line">   &lt;/select&gt;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="2-接口-api-edu-statis-process"><a href="#2-接口-api-edu-statis-process" class="headerlink" title="2 接口      /api/edu/statis/process"></a>2 接口      <a href="http://127.0.0.1:8085/sc_edu_test/swagger-ui.html#!/2535121335215083845427573279693124332479357452596825454/getRateByGuideIdUsingGET_2" target="_blank" rel="noopener">/api/edu/statis/process</a></h3><p> 本接口统计指南立题 对应指南的 高校/非高校的 各个指南流程下（processId( 项目流程为 project_processId))  分数通过率情况</p>
-<p>​            统计指南结题 对应指南的 各个指南流程下 所有项目 高校/非高校的 分数通过率情况, </p>
-<h4 id="具体解释："><a href="#具体解释：" class="headerlink" title="具体解释："></a>具体解释：</h4><p>​    1.相当于 通过查询条件将 指南下各个流程的项目 分数 和通过率情况 进行统计</p>
-<p>​       其中通过率 是根据passed属性 和 processId（指南流程id)  属性进行分类 </p>
-<pre><code>（passed属性 2为通过， 1为未通过 0为未完成)</code></pre><p>3.接口 ： 统计树：</p>
-<p>​    根据对应的指南id 和 流程id 统计各个规则的得分情况</p>
-
+        <h3 id="1-接口-指南各阶段流程统计数据："><a href="#1-接口-指南各阶段流程统计数据：" class="headerlink" title="1.接口      指南各阶段流程统计数据："></a>1.接口      <a href="http://127.0.0.1:8085/sc_edu_test/swagger-ui.html#!/2535121335215083845427573279693124332479357452596825454" target="_blank" rel="noopener">指南各阶段流程统计数据</a>：</h3>
+        
       
 
       
@@ -814,94 +904,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/05/关于hexo命令记录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/hello-world/">官方默认hexo命令教程（hexo基本操作）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/05/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-05T14:45:26.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">77字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-          
-        <!-- 添加完成 -->
-        
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/hello-world/">展开全文 >></a>
         </p>
       
 
